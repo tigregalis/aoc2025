@@ -1,0 +1,1 @@
+aoc load 2025 6 | str trim | lines | enumerate | each { |row| $row.item | split row -r " +" | if $row.index == 4 { $in } else { $in | into int } | wrap $"c($row.index)" } | reduce { |item, acc| $acc | merge $item } | each { |row| [$row.c0 $row.c1 $row.c2 $row.c3] | if $row.c4 == "+" { $in | math sum } else if $row.c4 == "*" { $in | math product } } | math sum
