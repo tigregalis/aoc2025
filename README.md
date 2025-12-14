@@ -1,6 +1,6 @@
 Ensure you have [nushell](https://www.nushell.sh/).
 
-Log into [Advent of Code](adventofcode.com), open developer tools (F12) and get and save the value of the session cookie as a `session` file. For example:
+Log into [Advent of Code](https://adventofcode.com), open developer tools (F12) and get and save the value of the session cookie as a `session` file. For example:
 
 ```nu
 open "session" | str substring 0..<8
