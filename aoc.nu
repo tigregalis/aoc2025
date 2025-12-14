@@ -18,7 +18,7 @@ def "aoc save" [year: int, day: int, part: int] {
       return;
     }
   }
-  history | last | get command | save --force $filename
+  history | where command =~ "aoc load" | last | get command | save --force $filename
   open $filename | nu-highlight
 }
 
